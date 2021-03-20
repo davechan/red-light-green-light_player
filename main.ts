@@ -15,9 +15,10 @@ basic.forever(function () {
 })
 basic.forever(function () {
     if (state == REDLIGHT) {
+        basic.pause(200)
         movement = Math.abs(input.acceleration(Dimension.Strength) - 1000)
-        if (movement != 0) {
-            game.gameOver()
+        if (movement > 200) {
+            basic.showIcon(IconNames.Skull)
         }
     }
 })
