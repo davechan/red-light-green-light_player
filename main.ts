@@ -17,10 +17,10 @@ basic.forever(function () {
     if (state == REDLIGHT) {
         basic.pause(200)
         movement = Math.abs(input.acceleration(Dimension.Strength) - 1000)
-        if (movement > 200) {
+        if (movement > 100) {
             basic.showIcon(IconNames.Skull)
             music.setVolume(255)
-            soundExpression.giggle.playUntilDone()
+            soundExpression.soaring.playUntilDone()
         }
     }
 })
