@@ -19,6 +19,7 @@ basic.forever(function () {
         movement = Math.abs(input.acceleration(Dimension.Strength) - 1000)
         if (movement > 200) {
             basic.showIcon(IconNames.Skull)
+            music.setVolume(255)
             soundExpression.giggle.playUntilDone()
         }
     }
